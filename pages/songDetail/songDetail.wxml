@@ -1,0 +1,34 @@
+<!--pages/songDetail/songDetail.wxml-->
+<view class="detailContainer">
+<view class="header">
+<text class="title">{{songDetail.name}}</text>
+<text class="author">{{songDetail.ar[0].name}}</text>
+</view>
+<view class="playBody">
+<view class="point"></view>
+<image src="/static/images/song/needle.png" class="needle {{isPlay?'needleRotate':''}}" bindtap="isplay"></image>
+<view class="playDisc">
+<image src="/static/images/song/disc.png" class="disc"></image>
+<image src="{{songDetail.al.picUrl}}" class="{{isPlay?'cover':''}}"></image>
+</view>
+</view>
+<view class="progressBar">
+  <text>{{currentTime}}</text>
+
+<view class="durationBar">
+   <view class="currentBar" style="width: {{currentBarWidth}}px;"></view>
+  <view class="circle" style="left: {{currentBarWidth*2-7.5}}rpx;"></view>
+</view>
+
+<text>{{durationTime}}</text>
+
+</view>
+<view class="playControl">
+<text class="iconfont icon-suijibofang" bindtap="ranDomPlay" style="{{isRandomPlay?'background:#efefef; color: #0d0aac ;  border-radius: 10px;':''}}"></text>
+<text class="iconfont icon-shangyishoushangyige " bindtap="handleSwitch" id="pre"></text>
+<text class="iconfont {{isPlay?'icon-zanting':'icon-bofang'}} big" bindtap="isplay"></text>
+<text class="iconfont icon-xiayigexiayishou" bindtap="handleSwitch" id="next"></text>
+<text class="iconfont icon-bofangliebiao"></text>
+
+</view>
+</view>

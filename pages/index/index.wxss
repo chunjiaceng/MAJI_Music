@@ -1,0 +1,102 @@
+/* pages/index/index.wxss */
+
+.swiper-item {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper-item image {
+  width: 100%;
+}
+.navContainer {
+  display: flex;
+  margin-top: 30rpx;
+
+}
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.navItem .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: red;
+  border-radius: 50rpx;
+  color: aliceblue;
+  font-weight: 500;
+  font-size: 50rpx;
+  margin-bottom: 20rpx;
+}
+.navItem text {
+  font-size: 25rpx;
+}
+
+/* 推荐内容区*/
+.recommendScroll {
+  display: flex;
+  height: 300rpx;
+}
+.scrollItem {
+  width: 200rpx;
+  margin-right: 20rpx;
+
+}
+
+.scrollItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+
+}
+
+.scrollItem text {
+  font-size: 26rpx;
+  /* 单行文本溢出隐藏 省略号代替 */
+  /*display: block;*/
+  /*white-space: nowrap;*/
+  /*overflow: hidden;*/
+  /*text-overflow: ellipsis;*/
+
+  /* 多行文本溢出隐藏 省略号代替*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; /*设置对其模式*/
+  -webkit-line-clamp: 2; /*设置多行的行数*/
+}
+/*TopListMusic*/
+.TopListSwiper{
+  height: 500rpx;
+  border-radius: 4rpx;
+}
+.TopListSwiper .title{
+  font-size: 28rpx;
+  font-weight: 600;
+  display: block;
+  margin:20rpx;
+}
+.listItem{
+  background: rgb(249, 249, 250);
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+}
+.musicItem{
+  display: flex;
+ margin-bottom:20rpx ;
+}
+.musicItem image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.musicItem text{
+  margin-left:20rpx ;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+
+

@@ -1,0 +1,53 @@
+<!--pages/search/search.wxml-->
+<view class="searchContainer">
+<!--搜索区域-->
+<view class="header">
+
+<view class="searchBar" style="{{searchSongList.length&&inSearch?'z-index:99':''}}">
+<view class="searchItem" wx:for="{{searchSongList}}" wx:key="id" bindtap="handleSong" id="{{item.id}}">
+<text>{{index+1}}</text>
+<view class="song">
+<text class="songname">{{item.name}}</text></view>
+<text class="author">{{item.ar[0].name}}</text>
+
+</view>
+</view>
+<input class="searchInput" placeholder="搜索歌曲" 	bindinput="handleInput" 
+bindblur="changeSearch" bindfocus="changeSearch"/>
+<text bindtap="toBack">取消</text>
+</view>
+
+
+<!--历史记录-->
+<view class="searchRecord" wx:if="{{historyList.length}}">
+ 
+<view class="title">
+<text>历史记录</text>
+<view class="hr"></view>
+</view>
+<view class="recordItem" wx:for="{{historyList}}" >{{item}}</view>
+<view class="clearItem" bindtap="clearHistory">清除</view>
+
+</view>
+
+
+
+<!--搜索主体-->
+<view class="title">
+<text>热搜榜</text>
+<view class="hr"></view>
+</view>
+
+
+<view class="searchBody">
+
+
+ <view class="searchList" wx:for="{{hotSearchList}}" wx:key="content">
+<view class="listItem" >{{item.searchWord}}</view>
+<image src="{{item.iconUrl}}"></image>
+  </view>
+
+
+
+</view>
+</view>

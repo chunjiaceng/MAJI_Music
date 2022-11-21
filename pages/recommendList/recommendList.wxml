@@ -1,0 +1,31 @@
+<!--pages/recommendList/recommendList.wxml-->
+<view class="pageContainer">
+  <!--头部-->
+ <view class="header">
+   <image src="../../static/images/recommendSong/recommendSong.jpg" class="recommendImage"></image>
+   <view class="logoDate">
+     <text>{{date}}</text>
+   </view>
+ </view>
+
+ <view class="SongList">
+ <view class="PlayMore">
+     <text class="playAll" bindtap="playAll">播放全部</text>
+     <text class="iconfont icon-androidgengduo more"></text>
+ </view>
+
+ <scroll-view class="SongScroll" scroll-y="true">
+   
+  <view class="ScrollItem"id="{{item.id}}" wx:for="{{songList}}" wx:key="id" bindtap="toSongUtile" data-song="{{item}}" data-index="{{index}}">
+    <image src="{{item.al.picUrl}}"></image>
+    <view class="songInfo">
+      <text>{{item.name}}</text>
+      <text class="author">{{item.ar[0].name}}</text>
+    </view>
+    <text class="iconfont icon-androidgengduo more"></text>
+  </view>
+  
+ </scroll-view>
+ </view>
+
+</view>

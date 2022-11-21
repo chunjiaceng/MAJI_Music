@@ -1,0 +1,161 @@
+/* pages/songDetail/songDetail.wxss */
+.detailContainer{
+  background:linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150rpx;
+  width: 100%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  
+  margin-bottom: 30rpx;
+}
+.header .title{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 26px;
+  color: #efefef;
+}
+.detailContainer .playBody{
+  overflow: hidden;
+  height:500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.detailContainer .playBody .point{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #f7f7f8;
+  z-index: 100;
+}
+.detailContainer .playBody .needle{
+  transform: rotate(-20deg);
+  transform-origin: 3rpx 0rpx;
+  transition: transform 1s;
+  z-index: 99;
+  position: relative;
+  top: -25rpx;
+  left: 34px;
+  height: 150px;
+  width: 120px;
+  
+}
+.detailContainer .playBody .needleRotate{
+  transform: rotate(0deg);
+  transition: transform 1s;
+}
+.detailContainer .playBody .playDisc{
+  width: 100vw;
+  height: 400px;
+}
+.detailContainer .playBody .playDisc image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+.detailContainer .playBody .playDisc .disc{
+  z-index: 98;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  
+}
+.detailContainer .playBody .playDisc .aps{
+  animation-play-state: paused;
+}
+.detailContainer .playBody .playDisc .cover{
+  animation: rotate 6s  linear infinite ;
+  
+  animation-delay: 1s;
+  
+}
+@keyframes rotate{
+  from{
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.playControl{
+  
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30rpx;
+  border-top: 1px solid #efefef ;
+}
+.playControl text{
+  height: 60px;
+  color: #efefef;
+  width: 40px;
+  
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+}
+.playControl .big{
+  font-size: 50px;
+}
+.progressBar{
+  width: 90%;
+  height: 50rpx;
+
+  margin:20rpx;
+  margin-bottom: 50rpx;
+  display: flex;
+}
+.progressBar text{
+  color: #efefef;
+  line-height: 50rpx;
+  margin: 0 15px;
+}
+.progressBar .durationBar{
+  position: relative;
+  width: 200px;
+  height: 5rpx;
+  background: #efefef;
+  margin: auto;
+  opacity: 0.6;
+}
+.progressBar .durationBar .currentBar{
+  position: absolute;
+  width: 0px;
+  height: 5rpx;
+  background: red;
+  margin: auto;
+ 
+}
+.progressBar .durationBar .circle{
+  background-color: red;
+  position: absolute;
+  height: 20rpx;
+  width: 20rpx;
+  top: -7.5rpx;
+  left: -7.5rpx;
+  border-radius: 50%;
+}

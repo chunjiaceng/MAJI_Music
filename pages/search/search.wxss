@@ -1,0 +1,152 @@
+/* pages/search/search.wxss */
+.searchContainer{
+  background-color: #fefefe;
+}
+.title{
+  display: flex;
+  height: 60rpx;
+  width: 100%;
+
+  line-height: 60rpx;
+  margin-bottom: 10rpx;
+}
+.title .hr{
+  flex: 1;
+  height: 5rpx;
+  background-color: #c1c1c1;
+  margin: auto;
+  margin-left: 20rpx;
+}
+.title text{
+  margin-left: 10rpx;
+  color: #1b1b1b;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/*头部区域css*/
+.header{
+  
+  display:  flex;
+  height: 30px;
+  line-height: 30px;
+  padding: 20rpx;
+}
+.header .searchInput{
+  z-index: 100;
+  margin-right: 20rpx;
+  height: 30px;
+  flex: 1;
+  padding-left: 20rpx;
+  border-radius: 10rpx;
+ background-color: #ebebeb;
+  
+}
+.header text{
+  z-index: 100;
+  line-height: 30px;
+  color: #c1c1c1;
+  width: 50px;
+  text-align: center;
+}
+
+
+/*searchRecord css*/
+
+.searchRecord{
+  display: flex;
+  width: 100%;
+  height: 280rpx;
+ 
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.searchRecord .recordItem{
+  margin: 20rpx;
+ color: black;
+  padding: 10rpx;
+  height: 20px;
+  background-color: #ebebeb;
+  border-radius: 10px;
+}
+.clearItem{
+  position: absolute;
+  left: 320px;
+  top: 150px;
+  width: 50px;
+  height: 50px;
+  background-color: #ebebeb;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 30rpx;
+}
+ 
+
+
+.searchBody{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.searchBody .searchList{
+  display: flex;
+  margin: 20rpx;
+  width: 40%;
+  height: 30px;
+  line-height: 30px;
+  color: #838282;
+  
+  justify-content: space-around;
+}
+.searchBody .searchList .listItem{
+  height: 30px;
+  line-height: 30px;
+}
+.searchBody .searchList image{
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  
+}
+.searchBar{
+  
+  z-index: -1;
+  padding-top: 40px;
+  position: fixed;
+  left: 4;
+  top:10px;
+  height: 450px;
+  width: 90%;
+  background-color: #fefefe;
+  border-radius: 10px;
+}
+.header .searchBar .searchItem{
+  
+  display: flex;
+  background-color: #ebebeb;
+  height: 40px;
+  border-top:3px solid #fefefe;
+  line-height: 40px;
+  color: #1b1b1b;
+}
+.searchBar .searchItem .song{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  line-height: 40px;
+}
+.searchBar .searchItem .author{
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.header .searchBar .searchItem text{
+  color: #1b1b1b;
+  
+}

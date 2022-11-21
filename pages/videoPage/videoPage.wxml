@@ -1,0 +1,45 @@
+<!--pages/videoPage/videoPage.wxml-->
+<view class="videoContainer">
+<!--头部区域-->
+<view class="header">
+<image src="../../static/images/logo.png"></image>
+<view class="searchVideo"bindtap="onSearch" style="{{style}}" bindtap="toSearch">海阔天空</view>
+<image src="../../static/images/video/video.jpg"></image>
+</view>
+<!--导航栏区域-->
+<view class="navigationBar">
+<scroll-view class="navScroll" scroll-x="true" enable-flex="true" 	scroll-into-view="{{'d'+labelId}}">
+  
+<text id="{{'d'+item.labelId}}" class="{{index==labelId?'redline':''}}" wx:for="{{labelList}}" wx:key="id" bindtap="labelTap" data-type="{{index}}" >{{item.name}}</text>
+</scroll-view>
+
+</view>
+<!--视频区域-->
+<scroll-view 
+scroll-y="true" 
+class="videoScroll" 
+enable-flex="true"
+bindrefresherrefresh="handleFresher" 
+refresher-enabled="true" 	
+refresher-triggered="{{isTriggered}}"
+bindscrolltolower="handleToLower">
+<view class="videoItem" wx:for="{{videoList}}" wx:key="id">
+<image src="{{item.data.coverUrl}}" mode="aspectFit"></image>
+<view class="videoComment">
+
+<text>{{item.data.title}}</text>
+</view>
+<view class="iconList">
+<text class="iconfont icon-pinglun"></text>
+<text class="iconfont icon-dianzan"></text>
+<button class="iconfont icon-zhuanfa" open-type="share" data-type="{{index}}"></button>
+</view>
+
+</view>
+</scroll-view>
+
+
+
+
+</view>
+

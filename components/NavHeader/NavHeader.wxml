@@ -1,0 +1,9 @@
+<!--pages/components/NavHeader.wxml-->
+<view class="line"></view>
+<view class="recommentMusic">
+  <view class="header"><text>{{title}}</text></view>
+  <view class="body">
+  <view class="title">{{nav}}</view>
+  <view class="more" bindtap="lookmore">查看更多</view>
+  </view>
+</view>
